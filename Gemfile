@@ -69,3 +69,7 @@ end
 gem "devise", "~> 4.9"
 
 gem "dotenv-rails", "~> 3.0"
+
+gem "bootstrap", "~> 5.3"
+
+gem "sassc-rails", "~> 2.1"
