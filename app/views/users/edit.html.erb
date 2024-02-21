@@ -1,0 +1,26 @@
+<h1>Modifier l'utilisateur</h1>
+
+<%= form_for @user do |f| %>
+  <div class="field">
+    <%= f.label :first_name %><br>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %><br>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description %>
+  </div>
+
+  <%= link_to 'Modifier Email et Mot de Passe', edit_user_registration_path, class: 'btn btn-link' %>
+
+  <div class="actions">
+    <%= f.submit "Sauvegarder" %>
+  </div>
+<% end %>
+
+<%= link_to 'Retour', user_path(@user) %>

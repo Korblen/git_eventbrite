@@ -1,0 +1,15 @@
+<h1>Profil de l'utilisateur</h1>
+
+<div class="user-profile">
+  <p><strong>Prénom :</strong> <%= @user.first_name %></p>
+  <p><strong>Nom :</strong> <%= @user.last_name %></p>
+  <p><strong>Email :</strong> <%= @user.email %></p>
+  <p><strong>Description :</strong> <%= @user.description %></p>
+</div>
+<h2>Mes événements :</h2>
+<% Event.all.each do |event| %>
+    <% if event.admin_id == current_user.id %>
+        <p><%= link_to event.title, event_path(event) %></p>
+    <%end%>
+<% end %>
+<%= link_to 'Modifier', edit_user_path(@user), class: 'btn btn-primary' %>

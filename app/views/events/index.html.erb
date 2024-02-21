@@ -1,2 +1,24 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<p style="color: green"><%= notice %></p>
+
+<div class="jumbotron">
+  <h1 class="display-4">Events</h1>
+  <a class="btn btn-outline-danger btn-sm" href="<%= new_event_path%>" role="button">New event</a>
+  <hr class="my-4">
+  <br><br>
+</div>
+
+
+<div id="events">
+  <% if @events.any? %>
+    <% @events.each do |event| %>
+      <div class="event">
+        <%= render partial: 'events/event', locals: { event: event } %>
+        <p>
+          <%= link_to "Voir cet événement", event_path(event), class: 'btn btn-primary' %>
+        </p>
+      </div>
+    <% end %>
+  <% else %>
+    <p>Aucun événement trouvé.</p>
+  <% end %>
+</div>

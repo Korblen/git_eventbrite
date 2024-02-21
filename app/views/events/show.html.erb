@@ -1,0 +1,8 @@
+<h1><%= @event.title %></h1>
+<p><%= @event.description %></p>
+<p>Location: <%= @event.location %></p>
+<p>Date: <%= @event.start_date %></p>
+<p>Duration: <%= @event.duration %> minutes</p>
+<p>Price: <%= number_to_currency(@event.price) %></p>
+
+<%= link_to 'Back to Events', events_path %>

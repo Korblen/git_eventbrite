@@ -73,3 +73,8 @@ gem "dotenv-rails", "~> 3.0"
 gem "bootstrap", "~> 5.3"
 
 gem "sassc-rails", "~> 2.1"
+
+gem "rails-ujs", "~> 0.1.0"
+gem 'jquery-rails'
+
+gem "faker", "~> 3.2"
